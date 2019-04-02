@@ -45,7 +45,7 @@
                   <li class="name">子慕</li>
               </ul>
           </nuxt-link>
-          <nuxt-link to='/' class="alink">
+          <nuxt-link to='/people/chenLiangLiang' class="alink">
               <ul class="wriper">
                   <li class="image"></li>
                   <li class="name">亮亮</li>
