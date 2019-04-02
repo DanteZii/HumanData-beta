@@ -45,7 +45,7 @@
           </li>
           <li class="information2">
               <div class="informationli2">运动基础</div>
-              <div class="informationli3">乒乓球 田径</div>
+              <div class="informationli3">乒乓球|田径</div>
           </li>
           <li class="information2">
               <div class="informationli2">抽烟酗酒史</div>
