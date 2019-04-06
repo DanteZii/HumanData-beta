@@ -3,15 +3,9 @@
     <section class="container2">
         <h1 class="h1k">HumanData</h1>
         <div class="wrapper">
-          <nuxt-link to='/personinfo' class="alink">
-              <ul class="wriper">
-                  <li class="image"></li>
-                  <li class="name">陈冠旭</li>
-              </ul>
-          </nuxt-link>
           <div v-for="item in items"
            :key="item.id">
-           <nuxt-link to="/personinfo" class="alink">
+           <nuxt-link :to="{ path: '{{ pages }}' }" class="alink">
             <ul class="wriper">
                 <li class="image">{{item.image}}</li>
                 <li class="name">{{item.name}}</li>
@@ -35,7 +29,7 @@ export default {
     return{
       items: [
         { name: '陈冠旭',
-          pages: '/info'
+          pages: '/'
         },
         { name: '陈晗'},
         { name: '郭慧琳'},
