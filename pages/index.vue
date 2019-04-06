@@ -3,7 +3,7 @@
     <section class="container2">
         <h1 class="h1k">HumanData</h1>
         <div class="wrapper">
-          <nuxt-link to='/personinfo' class="alink">
+          <nuxt-link to='/people/chenguanxu' class="alink">
               <ul class="wriper">
                   <li class="image"></li>
                   <li class="name">陈冠旭</li>
@@ -64,65 +64,6 @@
     </section>
 </template>
 <style>
-
-* {
-  margin: 0;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #fff;
-}
-h1 {
-    margin-top: 20px;
-}
-.container2 {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  
-
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-.alink{
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-.wriper {
-  margin-top: 6px;
-  margin-bottom: 6px;
-  width: 90%;
-  height: 90px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: #e8e8e8 1px 2px 6px ;
-  display: flex;
-  align-items: center;
-  list-style-type:none;
-}
-.image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #7990EF;
-  box-shadow: #7990EF 1px 2px 6px;
-  margin-left: 10px;
-
-}
-.name {
-  margin-left: 30px;
-
-}
-.h1k {
-  margin-bottom: 10px;
-}
-
 
 </style>
 

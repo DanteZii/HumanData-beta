@@ -1,8 +1,9 @@
 <template>
   <section class="container">
-    <div class="wraper">
+    <div class="wraper" v-for="todo in todos"
+       :key="todo.id">
       <h3 class="title">
-        陈晗
+        {{ todo.name }}
       </h3>
       <div class="wrapper2">
         <div class="radius">
@@ -14,54 +15,58 @@
       </div>
       <ul class="information">
           <li class="informationli">
-              <div class="height">176</div>
+              <div class="height">{{todo.height}}</div>
               <div class="heightext">身高</div>
          </li>
           <li class="informationli">
-              <div class="height">1559</div>
+              <div class="height">{{todo.metabolism}}</div>
               <div class="heightext">代谢</div>
           </li>
           <li class="informationli">
-              <div class="height">66</div>
+              <div class="height">{{todo.weight}}</div>
               <div class="heightext">体重</div>
           </li>
       </ul>
       <ul class="information1">
           <li class="information2">
+              <div class="informationli2">血型</div>
+              <div class="informationli3">{{todo.bloodType}}</div>
+          </li>
+          <li class="information2">
               <div class="informationli2">三餐时间</div>
-              <div class="informationli3">8:30 12:00 21:00</div>
+              <div class="informationli3">{{todo.foodTime}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">睡眠时长</div>
-              <div class="informationli3">8小时/天</div>
+              <div class="informationli3">{{todo.sleepTime}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">入睡时间</div>
-              <div class="informationli3">凌晨1点</div>
+              <div class="informationli3">{{todo.sleepStart}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">起床时间</div>
-              <div class="informationli3">8点</div>
+              <div class="informationli3">{{todo.upStrat}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">运动基础</div>
-              <div class="informationli3">乒乓球|田径</div>
+              <div class="informationli3">{{todo.sf}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">抽烟酗酒史</div>
-              <div class="informationli3">无</div>
+              <div class="informationli3">{{todo.sd}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">家族遗传</div>
-              <div class="informationli3">高血压</div>
+              <div class="informationli3">{{todo.gd}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">身体状况</div>
-              <div class="informationli3">良好</div>
+              <div class="informationli3">{{todo.pc}}</div>
           </li>
           <li class="information2">
               <div class="informationli2">目标</div>
-              <div class="informationli3">Pro</div>
+              <div class="informationli3">{{todo.aims}}</div>
           </li>
           <div class="null"></div>
       </ul>
@@ -76,143 +81,24 @@ export default {
   data() {
     return {
       todos: [
-        { name: 123 },
-        { name: '陈冠旭' }
+        { 
+          name: '陈晗',
+          height:  '176',
+          metabolism:'1559',
+          bloodType: '不知道',
+          weight:'66',
+          foodTime:'8:30 12:00 21:00',
+          sleepTime:'8小时/天',
+          sleepStart:'凌晨1点',
+          upStrat:'8:00',
+          sf:'乒乓球|田径',
+          sd:'无',
+          gd:'高血压',
+          pc:'良好',
+          aims:'Pro'
+          },
       ]
     }
-  },
-  components: {
-    Logo
   }
 }
 </script>
-
-<style>
-* {
-  padding: 0;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.title {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  font-weight: 600;
-  font-size: 24px;
-  color: #35495e;
-  letter-spacing: 1px;
-  margin-top: 20px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.nuxt-link-active{
-  text-decoration: none;
-}
-.wrapper2 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.radius {
-  margin-top: 20px;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #DDE3FF 4px dashed;
-}
-.radius1 {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #E8E8E8 4px dashed;
-}
-.radius2 {
-  animation:radiusanmation 5s;
-  border-radius: 50%;
-  background: #7990EF;
-  box-shadow: #7990EF 1px 2px 10px;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-}
-@keyframes radiusanimation
-{
-from {box-shadow: #7990EF 0px 0px 0px;}
-to {box-shadow: #7990EF 1px 2px 30px;}
-}
-.wraper {
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  width: 80%;
-
-}
-.information {
-    display: flex;
-    list-style-type:none;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.height {
-    font-size: 24px;
-    font-weight: 600;
-}
-.heightext {
-    font-size: 16px;
-    color: #A4ADBF
-}
-.information1 {
-    padding: 0;
-    display: flex;
-    list-style-type:none;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
-    
-}
-.information2 {
-
-    width: 100%;
-    display: flex;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: #EFEFEF 1px solid;
-    justify-content: space-between;
-}
-.informationli2 {
-    color: #707070;
-}
-.null {
-    margin-top: 60px;
-}
-</style>
